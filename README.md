@@ -17,38 +17,27 @@ An interactive **Streamlit dashboard** that lets you:
    cd data-dashboard-ml
 
 2. Create & activate virtual environment (Windows PowerShell)
-powershell
-Copy code
-python -m venv .venv
-.venv\Scripts\activate
-If you see an activation error, run this once:
+   ```bash
+   python -m venv .venv
+   .venv\Scripts\activate
 
-powershell
-Copy code
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 3. Install dependencies
-bash
-Copy code
-pip install --upgrade pip
-pip install -r requirements.txt
-(Optional: if you want XGBoost support)
+   ```bash
+   pip install --upgrade pip
+   pip install -r requirements.txt
 
-bash
-Copy code
-pip install xgboost
 4. Generate sample data (optional)
-bash
-Copy code
-python generate_data.py
+   ```bash
+   python generate_data.py
+
 5. Run the app
-bash
-Copy code
-streamlit run app.py
+   ```bash
+   streamlit run app.py
+
+
 Now open your browser at 👉 http://localhost:8501
 
 📂 Project Structure
-bash
-Copy code
 data-dashboard-ml/
 ├─ app.py                 # Main Streamlit app
 ├─ generate_data.py       # Script to create sample dataset
@@ -58,29 +47,19 @@ data-dashboard-ml/
 ├─ .gitignore             # Ignore data, models, venv
 ├─ data/                  # Sample dataset (ignored in git)
 └─ models/                # Trained models (ignored in git)
+
 📊 How to Use
-Upload your own CSV (or generate the built-in sample dataset).
 
-Choose the target column (the value you want to predict).
+1. Upload your own CSV (or generate the built-in sample dataset).
 
-The app automatically uses other numeric columns as features.
+2. Choose the target column (the value you want to predict).
 
-View EDA charts → distribution, heatmap, scatter plots.
+3. The app automatically uses other numeric columns as features.
 
-The model is trained → you get RMSE & R² metrics.
+4. View EDA charts → distribution, heatmap, scatter plots.
 
-Enter feature values in the sidebar → click Predict.
+5. The model is trained → you get RMSE & R² metrics.
 
-Download the trained model or dataset for later use.
+6. Enter feature values in the sidebar → click Predict.
 
-📁 Example Datasets
-Try with these free datasets:
-
-Student Scores Dataset
-
-Boston Housing Prices
-
-Wine Quality
-
-👨‍💻 Author
-Created by Balaji M — GitHub Profile
+7. Download the trained model or dataset for later use.
